@@ -1,0 +1,106 @@
+body {
+  background-color: #acc8e4; /* Soft background color */
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background-color: #b5e0ec; */
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #091422;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+button.time-slot {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease-in, background-color 0.3s;
+}
+
+button.time-slot:hover {
+  transform: scale(1.05);
+  background-color: #357ae8;
+}
+
+button.selected-time-slot {
+  background-color: #34a853;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.selected-time {
+  background-color: #e8f5e9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
+}
+
+.selected-time h3 {
+  color: #34a853;
+}
+
+.calendar-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 350px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-cell {
+  text-align: center;
+  padding: 12px;
+  background-color: #f1f3f4;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.calendar-cell:hover {
+  background-color: #d2e3fc;
+  transform: scale(1.05);
+}
+
+.calendar-cell.selected {
+  background-color: #1a73e8;
+  color: white;
+}
